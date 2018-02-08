@@ -74,7 +74,7 @@ return msg;
 
 ---
 ### [Brightness-data-set]
-Demo Flow: [Brightness_Data_Get_Demo_Flow.json](./demo/Brightness_Data_Get_Demo_Flow.json)
+Demo Flow: [Brightness_Data_Set_Demo_Flow.json](./demo/Brightness_Data_Set_Demo_Flow.json)
 
 This node can only receive a value for one time.
 
