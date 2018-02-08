@@ -28,12 +28,12 @@ Demo Flow: [Brightness_Data_Get_Demo_Flow.json](./demo/Brightness_Data_Get_Demo_
 
 It will output all of the information after deployment for once.
 
-![Get_All_Info](./png/Get_All_Info_Flow.png)
+![Get_All_Info](./png/Get_All_Info_Flow.PNG)
 
-![Get_All_Info_Func](./png/Get_All_Info_Func.png)
+![Get_All_Info_Func](./png/Get_All_Info_Func.PNG)
 
 Output is a <code>json</code> format object:
-![Get_All_Info_Output](./png/Get_All_Info_Output.png)
+![Get_All_Info_Output](./png/Get_All_Info_Output.PNG)
  - **Min :** Minimum Value of brightness
  - **Max :** Maximum Value of brightness
  - **Value :** Current Value of brightness
@@ -82,20 +82,20 @@ All you have to do is sending a format like <code>msg.payload</code>, type is <c
 
 #### Set Current Brightness Value to specified value 
 
-![Set_Value_Flow](./png/Set_Value_Flow.png)
+![Set_Value_Flow](./png/Set_Value_Flow.PNG)
 
-![Set_Value_Inject](./png/Set_Value_Inject.png)
+![Set_Value_Inject](./png/Set_Value_Inject.PNG)
 
 If you send a number is not between **<code>Minimum</code>** and **<code>Maximum</code>**, you will get <code>Not Support</code>.
 
-![Not_Support](./png/Not_Support.png)
+![Not_Support](./png/Not_Support.PNG)
 
 
 #### Set Auto Brightness
 
-![Set_Auto_Flow](./png/Set_Auto_Flow.png)
+![Set_Auto_Flow](./png/Set_Auto_Flow.PNG)
 
-![Set_Auto_Inject](./png/Set_Auto_Inject.png)
+![Set_Auto_Inject](./png/Set_Auto_Inject.PNG)
 
 You can configure the payload <code>True</code> or <code>False</code>.
 
