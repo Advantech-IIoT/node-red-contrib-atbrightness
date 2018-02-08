@@ -1,0 +1,31 @@
+{
+    "name": "node-red-contrib-atbrightness",
+    "node-red": {
+        "nodes": {
+            "at-brightness": "atbrightness.js"
+        }
+    },
+    "version": "1.0.8",
+    "description": "Node-Red Advantech Brightness Nodes",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "Brightness",
+        "atbrightness",
+        "contrib-atbrightness",
+        "Advantech",
+        "AdvantechIIoT",
+        "IIoT"
+    ],
+    "dependencies": {
+        "node-atbrightness": "^0.1.6"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Advantech-IIoT/node-red-contrib-atbrightness"
+    },
+    "author": "Yungchun.Tu",
+    "license": "Apache-2.0"
+}

@@ -1,0 +1,112 @@
+<!--
+  Copyright JS Foundation and other contributors, http://js.foundation
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<!-- Get Brightness Value -->
+<script type="text/x-red" data-template-name="Brightness data get">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> <span data-i18n="common.label.name"></span></label>
+        <input type="text" id="node-input-name" data-i18n="[placeholder]common.label.name">
+    </div>
+    <br/>
+</script>
+
+<script type="text/x-red" data-help-name="Brightness data get">
+    <p>Get brightness information from Advantech device.</p>
+    <br />
+    <p>This node will output once automatically after start.</p>
+    <p>The Output is an object called <code>msg</code> containing <code>msg.payload</code> and 4 attributes of <code>msg.payload</code> are as follows:</p>
+    <p><code>msg.payload.Max</code> : Maximum brightness value</p>
+    <p><code>msg.payload.Min</code> : Minimum brightness value</p>
+    <p><code>msg.payload.Value</code> : Current brightness value</p>
+    <p><code>msg.payload.Auto</code> : Auto brightness status</p>
+    <br />
+    <p>The Input format is the same with the output format</p>
+    <p>Example:</p>
+    <p>If you want to get Maximum brightness value, inject a string like <code>msg.payload = {Max: true}</code></p>
+    <p>The output string--<code>msg.payload.Max</code> is the value you get.</p>
+    <br />
+    <p>If the device does not support Autobrightness, <code>msg.payload.Auto</code> will be <code>Not Support</code>.</p>
+    <br /><br /><br /><br /><br />
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('Brightness data get', {
+        category: 'Advantech_IIoT',
+        color: "darksalmon",
+        defaults: {
+            name: {
+                value: ""
+            }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "arrow-in.png",
+        align: "left",
+        label: function () {
+            return this.name || "IIoT-Brightness_Data_Get";
+        },
+        labelStyle: function () {
+            return this.name ? "node_label_italic" : "";
+        }
+    });
+</script>
+
+<!-- Set Brightness Value -->
+<script type="text/x-red" data-template-name="Brightness data set">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> <span data-i18n="common.label.name"></span></label>
+        <input type="text" id="node-input-name" data-i18n="[placeholder]common.label.name">
+    </div>
+    <br/>
+</script>
+
+<script type="text/x-red" data-help-name="Brightness data set">
+    <p>Configure brightness for Advantech device.</p>
+    <br />
+    <p>The Input format must be <code>msg.payload</code> format to configure <b>brightness value</b> or enable <b>auto brightness</b>.</p>
+    <p>Example:</p>
+    <p>If you want to set current brightness value to <code>3</code>, inject <code>msg.payload</code> as <code>Number</code> type.</p>
+    <p>The output value--<code>msg.payload</code> is the value you set--<code>3</code>.</p>
+    <br />
+    <p>If the brightness value you input is out of <code>msg.payload.Min</code> and <code>msg.payload.Max</code>, 
+        the output value--<code>msg.payload</code> will be <code>Not Support</code>.</p>
+    <p>If the device does not support Auto Brightness, even if you input any valid values--<code>True</code> or <code>False</code>-- will only 
+        output <code>Not Support</code>.</p>
+    <br /><br /><br /><br /><br />
+    
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('Brightness data set', {
+        category: 'Advantech_IIoT',
+        color: "darksalmon",
+        defaults: {
+            name: {
+                value: ""
+            }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "arrow-in.png",
+        align: "right",
+        label: function () {
+            return this.name || "IIoT-Brightness_Data_Set";
+        },
+        labelStyle: function () {
+            return this.name ? "node_label_italic" : "";
+        }
+    });
+</script>
