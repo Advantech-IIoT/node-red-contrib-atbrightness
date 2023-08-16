@@ -104,10 +104,11 @@ You can configure the payload <code>True</code> or <code>False</code>.
 
 ---
 ## Tested Platform 
-- Windows 10 Enterprise LTSB with node.js 6.10.1
+- Windows 10 Enterprise LTSC with node.js 18.14.1
  
 ## History
+- 3.0.1 - June 2023 : update bundleDependencies
 - 1.0.7 - October 2017 : Initial Release
 
 ## License
-Copyright 2017 ADVANTECH Corp. under [the Apache 2.0 license](LICENSE).
+Copyright 2023 ADVANTECH Corp. under [the Apache 2.0 license](LICENSE).

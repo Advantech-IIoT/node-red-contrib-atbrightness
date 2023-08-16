@@ -5,7 +5,7 @@
             "at-brightness": "atbrightness.js"
         }
     },
-    "version": "1.0.11",
+    "version": "3.0.1",
     "description": "Node-Red Advantech Brightness Nodes",
     "main": "index.js",
     "scripts": {
@@ -19,13 +19,16 @@
         "AdvantechIIoT",
         "IIoT"
     ],
-    "dependencies": {
-        "node-atbrightness": "^0.1.6"
-    },
     "repository": {
         "type": "git",
         "url": "https://github.com/Advantech-IIoT/node-red-contrib-atbrightness"
     },
-    "author": "Yungchun.Tu",
-    "license": "Apache-2.0"
+    "author": "Payton.Ko",
+    "license": "Apache-2.0",
+    "dependencies": {
+        "node-atbrightness": "file:../Packages/node-atbrightness-3.0.1.tgz"
+    },
+    "bundleDependencies": [
+        "node-atbrightness"
+    ]
 }
